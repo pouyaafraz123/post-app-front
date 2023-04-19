@@ -1,0 +1,211 @@
+:root {
+  /* ------------ Colors -------------- */
+
+  /* Primary colors */
+  --color-primary-main: #29a9e1;
+  --color-primary-light: #29a9e199;
+  --color-primary-lightest: #29a9e11d;
+  --color-primary-contrast-text: #fff;
+
+  /* Secondary Colors */
+  --color-secondary-main: #334155;
+  --color-secondary-contrast-text: #fff;
+
+  /* Success Colors */
+  --color-success-dark: #1fbd68;
+  --color-success-main: #4ed273;
+  --color-success-contrast-text: #fff;
+
+  /* Error Colors */
+  --color-error-main: #e12929cc;
+  --color-error-light: #f44653;
+  --color-error-contrast-text: #fff;
+
+  /* Warning Colors */
+  --color-warning-main: #eaa31a;
+  --color-warning-light: #eaa31a99;
+  --color-warning-contrast-text: #fff;
+
+  /* Gray Colors */
+  --color-gray-darker: #334155;
+  --color-gray-dark: #334155cc;
+  --color-gray-main: #79899e;
+  --color-gray-light: #79899e99;
+  --color-gray-lighter: #bcbcbc80;
+  --color-gray-very-light: #bcbcbc1a;
+  --color-gray-contrast-text: #fff;
+
+  /* Paper Colors */
+  /* TODO : fix this color */
+  --color-paper-dark: #e5e5e5;
+  --color-paper-light: #ffffff;
+
+  /* Dark Colors */
+  --color-dark-main: #000;
+
+  /* ------------- TIMES --------------- */
+  --time-transition-hover: 200ms;
+  --time-default: 200ms;
+
+  /* i don't comment previous colors because it will break our current project */
+  /* ------------- New Colors -------------- */
+  --color-royal-blue: 41, 93, 225;
+  --color-cobalt: 3, 60, 204;
+  --color-malibu: 71, 203, 255;
+  --color-link-water: 244, 245, 252;
+  --color-peach-cream: 255, 239, 219;
+  --color-swamp: 0, 23, 31;
+  --color-dusty-gray: 152, 152, 152;
+  --color-shamrock: 38, 196, 161;
+  --color-mountain-meadow: 19, 165, 132;
+  --color-white: 255, 255, 255;
+  --color-elephant: 13, 35, 56;
+  --color-blue-zodiac: 15, 20, 30;
+  --color-iron: 212, 212, 216;
+  --color-danger: 247, 75, 74;
+  --color-warning: 254, 193, 1;
+  --color-success: 97, 210, 21;
+
+  /* -------------------- DEFAULT COLORS -------------------- */
+  --color-primary-main: var(--color-royal-blue);
+  /* secondary color for texts etc. */
+  --color-secondary-main: var(--color-white);
+
+  /* button's palette */
+  --color-primary-btn: var(--color-royal-blue);
+  --color-primary-btn-hover: var(--color-cobalt);
+  --color-disabled-btn: var(--color-dusty-gray);
+  --color-secondary-btn: var(--color-elephant);
+  --color-secondary-btn-hover: var(--color-white);
+  --color-secondary-btn-hover-text: var(--color-swamp);
+
+  /* tab's palette */
+  --color-primary-tab: var(--color-royal-blue);
+  --color-secondary-tab: var(--color-blue-zodiac);
+  --color-tab-hover: var(--color-white);
+
+  /* use this color for placeholder's text colors and button's text */
+  --color-light-text: var(--color-white);
+  --color-gray-text: var(--color-iron);
+
+  /* primary and secondary colors for background */
+  --color-primary-background: var(--color-elephant);
+  --color-secondary-background: var(--color-blue-zodiac);
+}
+
+
+
+
+[data-theme="royal_blue_light"] {
+  /* primary color for banners and row number etc. */
+  --color-primary-main: var(--color-royal-blue);
+  /* secondary color for texts etc. */
+  --color-secondary-main: var(--color-swamp);
+
+  /* button's palette */
+  --color-primary-main: var(--color-royal-blue);
+  /* secondary color for texts etc. */
+  --color-secondary-main: var(--color-white);
+
+  /* button's palette */
+  --color-primary-btn: var(--color-royal-blue);
+  --color-primary-btn-hover: var(--color-cobalt);
+  --color-disabled-btn: var(--color-dusty-gray);
+  --color-secondary-btn: var(--color-elephant);
+  --color-secondary-btn-hover: var(--color-white);
+  --color-secondary-btn-hover-text: var(--color-swamp);
+
+  /* tab's palette */
+  --color-primary-tab: var(--color-royal-blue);
+  --color-secondary-tab: var(--color-blue-zodiac);
+  --color-tab-hover: var(--color-white);
+
+  /* use this color for placeholder's text colors and button's text */
+  --color-light-text: var(--color-white);
+  --color-gray-text: var(--color-iron);
+
+  /* primary and secondary colors for background */
+  --color-primary-background: var(--color-elephant);
+  --color-secondary-background: var(--color-blue-zodiac);
+}
+[data-theme="royal_blue_dark"] {
+  /* primary color for banners and row number etc. */
+  --color-primary-main: var(--color-royal-blue);
+  /* secondary color for texts etc. */
+  --color-secondary-main: var(--color-white);
+
+  /* button's palette */
+  --color-primary-btn: var(--color-royal-blue);
+  --color-primary-btn-hover: var(--color-cobalt);
+  --color-disabled-btn: var(--color-dusty-gray);
+  --color-secondary-btn: var(--color-elephant);
+  --color-secondary-btn-hover: var(--color-white);
+  --color-secondary-btn-hover-text: var(--color-swamp);
+
+  /* tab's palette */
+  --color-primary-tab: var(--color-royal-blue);
+  --color-secondary-tab: var(--color-blue-zodiac);
+  --color-tab-hover: var(--color-white);
+
+  /* use this color for placeholder's text colors and button's text */
+  --color-light-text: var(--color-white);
+  --color-gray-text: var(--color-iron);
+
+  /* primary and secondary colors for background */
+  --color-primary-background: var(--color-elephant);
+  --color-secondary-background: var(--color-blue-zodiac);
+}
+[data-theme="shamrock_light"] {
+  /* primary color for banners and row number etc. */
+  --color-primary-main: var(--color-shamrock);
+  /* secondary color for texts etc. */
+  --color-secondary-main: var(--color-swamp);
+
+  /* button's palette */
+  --color-primary-btn: var(--color-shamrock);
+  --color-primary-btn-hover: var(--color-mountain-meadow);
+  --color-disabled-btn: var(--color-dusty-gray);
+  --color-secondary-btn: var(--color-link-water);
+  --color-secondary-btn-hover: var(--color-swamp);
+  --color-secondary-btn-hover-text: var(--color-white);
+
+  /* tab's palette */
+  --color-primary-tab: var(--color-shamrock);
+  --color-secondary-tab: var(--color-white);
+  --color-tab-hover: var(--color-swamp);
+
+  /* use this color for placeholder's text colors and button's text */
+  --color-light-text: var(--color-white);
+  --color-gray-text: var(--color-dusty-gray);
+
+  /* primary and secondary colors for background */
+  --color-primary-background: var(--color-link-water);
+  --color-secondary-background: var(--color-white);
+}
+[data-theme="shamrock_dark"] {
+  /* primary color for banners and row number etc. */
+  --color-primary-main: var(--color-shamrock);
+  /* secondary color for texts etc. */
+  --color-secondary-main: var(--color-white);
+
+  /* button's palette */
+  --color-primary-btn: var(--color-shamrock);
+  --color-primary-btn-hover: var(--color-mountain-meadow);
+  --color-disabled-btn: var(--color-dusty-gray);
+  --color-secondary-btn: var(--color-elephant);
+  --color-secondary-btn-hover: var(--color-white);
+  --color-secondary-btn-hover-text: var(--color-swamp);
+
+  /* tab's palette */
+  --color-primary-tab: var(--color-shamrock);
+  --color-secondary-tab: var(--color-blue-zodiac);
+  --color-tab-hover: var(--color-white);
+
+  /* use this color for placeholder's text colors and button's text */
+  --color-light-text: var(--color-white);
+  --color-gray-text: var(--color-iron);
+
+  /* primary and secondary colors for background */
+  --color-primary-background: var(--color-elephant);
+  --color-secondary-background: var(--color-blue-zodiac);
+}

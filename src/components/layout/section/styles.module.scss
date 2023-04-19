@@ -1,0 +1,24 @@
+@import "src/styles/functions.scss";
+
+.section {
+  padding: 40px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__sep {
+    height: 2px;
+    width: 90%;
+    background: linear-gradient(to right, #fff , rgba(255, 255, 255, 0.44) 30%, #ffffff00);
+  }
+
+  &__title {
+    font-size: 30px;
+	font-weight: 700;
+	color: colorFromRgb(secondary-main);
+  }
+
+  &__inside {
+    margin-top: 20px;
+  }
+}

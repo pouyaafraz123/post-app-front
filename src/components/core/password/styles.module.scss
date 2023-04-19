@@ -1,0 +1,115 @@
+@import "src/styles/functions.scss";
+
+.passwordContainer {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  background-color: colorFromRgb(secondary-background) !important;
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    caret-color: rgba(color(gray-text), 1);
+    -webkit-box-shadow: 0 0 0 30px colorFromRgb(secondary-background) inset !important;
+  }
+
+  input:-webkit-autofill {
+    -webkit-text-fill-color: rgba(color(gray-text), 1) !important;
+  }
+
+  border-radius: space(radius);
+  border: 2px solid transparent;
+  padding: space(pd-y) space(pd-x);
+
+  &[data-validation="success"] {
+    border-color: colorFromRgb(success);
+    transition: time(default);
+  }
+
+  &[data-validation="error"] {
+    border-color: colorFromRgb(danger);
+    transition: time(default);
+  }
+
+  &[data-validation="warning"] {
+    border-color: colorFromRgb(warning);
+    transition: time(default);
+  }
+
+  &[data-validation="none"]:focus-within {
+    border-color: rgba(color(primary-main), 0 0.8);
+  }
+
+  &[data-disabled="true"] {
+    background-color: rgba(color(gray-text), 0 0.2) !important;
+    border: 2px solid transparent;
+    color: colorFromRgb(gray-text);
+    & > .icon[data-variant="bold"] > path {
+      fill: colorFromRgb(gray-text);
+      transition: time(transition-hover);
+    }
+
+    & > .icon[data-variant="linear"] > path {
+      stroke: colorFromRgb(gray-text);
+      transition: time(transition-hover);
+    }
+  }
+
+  transition: time(default);
+}
+
+.passwordHeadIcon {
+  margin-right: space(mg-between);
+
+  &[data-variant="bold"] > path {
+    fill: rgba(color(gray-text), 0.6);
+  }
+
+  &[data-variant="linear"] > path {
+    stroke: rgba(color(gray-text), 0.6);
+  }
+}
+
+.password {
+  border: none;
+  width: 100%;
+  color: colorFromRgb(gray-text);
+  background-color: transparent;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: rgba(color(gray-text), 0.6);
+  }
+
+  &::-ms-reveal,
+  &::-ms-clear {
+    display: none;
+    -webkit-appearance: none;
+  }
+}
+
+.passwordTailIcon {
+  margin-left: space(mg-between);
+  transition: time(default);
+
+  path {
+    fill: rgba(color(primary-main), 0.8);
+    transition: time(default);
+  }
+
+  &:hover {
+    path {
+      fill: colorFromRgb(primary-main);
+      transition: time(transition-hover);
+      cursor: pointer;
+    }
+  }
+
+  cursor: pointer;
+}

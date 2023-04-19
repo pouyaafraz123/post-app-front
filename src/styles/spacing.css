@@ -1,0 +1,26 @@
+:root {
+  --space-pd-x: 15px;
+  --space-pd-y: 7px;
+
+  --space-mg-y: 7px;
+  --space-mg-x: 7px;
+  --space-mg-between: 7px;
+
+  --space-mg-1: 3px;
+
+  --space-radius: 5px;
+  --space-radius-sm: 15px;
+  --space-radius-lg: 50px;
+
+  --space-z-index: 1000;
+
+  --space-height-big: 45px;
+  --space-height-normal: 40px;
+  --space-height-small: 35px;
+  --space-mobile-header-height: 70px;
+
+  --space-sm: 576px;
+  --space-md: 768px;
+  --space-lg: 992px;
+  --space-xs: 1200px;
+}

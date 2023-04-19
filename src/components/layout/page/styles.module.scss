@@ -1,0 +1,12 @@
+.page {
+  display: flex;
+  width: 100%;
+  max-height: 100vh;
+
+  &__inside {
+    width: 100%;
+    max-height: 100vh;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+}

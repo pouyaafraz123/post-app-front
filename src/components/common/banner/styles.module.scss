@@ -1,0 +1,33 @@
+@import "src/styles/functions.scss";
+
+.container {
+  background-color: #293649;
+  display: flex;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 30px 20px;
+  border-radius: 5px;
+  background-position: left, right;
+  gap: 10px;
+  color: colorFromRgb(light-text);
+
+  &__count {
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 0.5rem !important;
+    text-align: justify;
+  }
+}

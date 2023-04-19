@@ -1,0 +1,88 @@
+@import  "src/styles/functions";
+
+.loginPage {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+
+  width: 100%;
+  height: 100%;
+
+  &__img{
+    background-size: cover;
+    background-position: center;
+    height: 50%;
+    border-radius: 40px 40px 0 0;
+  }
+
+  &__particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__section {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 80vh;
+    aspect-ratio: 3 /4;
+
+	border-radius: 40px;
+
+    box-shadow: 0 8px 10px 20px rgba(15, 15, 15, 0.5);
+  }
+
+  &__secBack{
+    backdrop-filter: blur(20px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 80vh;
+    aspect-ratio: 3 /4;
+    background-color: rgba(44, 47, 59, 0.8);
+    border-radius: 40px;
+
+  }
+  
+  &__title{
+    color: colorFromRgb(light-text);
+    font-size: 30px;
+    padding: 10px 0;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__content{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    height: 50%;
+    padding-bottom: 60px;
+  }
+
+  &__inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+  }
+
+  &__btn{
+    margin-top: 40px;
+    width: 100%;
+  }
+
+
+}

@@ -1,0 +1,23 @@
+@import "src/styles/functions.scss";
+@import "src/styles/mixins.scss";
+
+.formElementBaseContainer {
+  padding: 0 space(pd-x) space(pd-y) space(pd-x);
+}
+
+.no {
+  padding: 0;
+}
+
+.formElementLabel {
+  margin-bottom: 10px;
+  color: colorFromRgb(secondary-main);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.formElementError {
+  color: colorFromRgb(danger);
+  font-size: small;
+  @include animateWith(animate-fade);
+}

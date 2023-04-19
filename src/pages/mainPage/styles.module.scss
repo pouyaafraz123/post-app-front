@@ -1,0 +1,17 @@
+.main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  gap: 20px;
+
+  &__posts{
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(360px,1fr));
+	grid-template-rows: auto;
+	gap: 40px;
+	padding: 20px;
+	width: 100%;
+	justify-items: center;
+  }
+}

@@ -1,0 +1,28 @@
+.sidebar {
+  width: 80px;
+  height: 100%;
+  background-color: #17161b;
+  border-right: 1px #2c2f3b solid;
+
+  &__icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    aspect-ratio: 1;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: rgba(13, 129, 236, 0.05);
+    }
+
+    svg {
+      height: 4rem;
+      width: 4rem;
+      path {
+        fill: #f6f6f7;
+      }
+    }
+  }
+}
