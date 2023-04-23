@@ -183,7 +183,7 @@ function UploadInput({
         className={"d-none"}
         onChange={inputOnChange}
         ref={inputRef}
-        style={{display:"none"}}
+        style={{ display: "none" }}
         data-testid="hidden-input"
         multiple={fileUploadCount > 1}
         {...inputProps}

@@ -67,9 +67,7 @@ function calcScrollTop(
     // we know that scrollHeight >= scrollTop + ClientHeight
     const maxScrollTop =
       parentElement.scrollHeight - parentElement.clientHeight;
-    const scrollTop = Math.min(maxScrollTop, halfDeep);
-
-    return scrollTop;
+    return Math.min(maxScrollTop, halfDeep);
   }
   return 0;
 }

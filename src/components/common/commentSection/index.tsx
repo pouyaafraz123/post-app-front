@@ -17,7 +17,7 @@ export interface ICommentSectionProps {
   fetchNextPage: () => void;
   track: Ref<HTMLButtonElement>;
   post_id?: number;
-  noPadding?:boolean;
+  noPadding?: boolean;
 }
 
 const CommentSection = ({
@@ -28,7 +28,7 @@ const CommentSection = ({
   isError,
   isLoading,
   post_id,
-  noPadding
+  noPadding,
 }: ICommentSectionProps) => {
   const [open, setOpen] = useState(false);
 

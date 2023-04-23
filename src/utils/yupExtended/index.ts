@@ -75,11 +75,11 @@ yup.addMethod<DateSchema>(yup.date, "minAge", function (args) {
   return this.test("min-age-test", "", function (value) {
     const { createError } = this;
     const { optional, min } = args || { optional: false };
-    var dateOfBirth = new Date(value || "");
-    var differenceMs = Date.now() - dateOfBirth.getTime();
-    var dateFromEpoch = new Date(differenceMs);
-    var yearFromEpoch = dateFromEpoch.getUTCFullYear();
-    var age = Math.abs(yearFromEpoch - 1970);
+    const dateOfBirth = new Date(value || "");
+    const differenceMs = Date.now() - dateOfBirth.getTime();
+    const dateFromEpoch = new Date(differenceMs);
+    const yearFromEpoch = dateFromEpoch.getUTCFullYear();
+    const age = Math.abs(yearFromEpoch - 1970);
 
     if (!value && !optional) {
       return createError({ message: "This field is required." });

@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { EyeBold, KeyBold, UnhideBold } from "../../icons";
-import { HTMLProps, useState } from "react";
+import React, { HTMLProps, useState } from "react";
 import classes from "./styles.module.scss";
 
 export interface IPasswordProps {

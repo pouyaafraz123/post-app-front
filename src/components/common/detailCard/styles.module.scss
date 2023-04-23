@@ -1,6 +1,6 @@
 @import "src/styles/functions.scss";
 
-.row{
+.row {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -16,7 +16,7 @@
   width: 100%;
   min-width: 250px;
 
-  &__buttons{
+  &__buttons {
     padding: 10px 0;
     display: flex;
     flex-direction: column;

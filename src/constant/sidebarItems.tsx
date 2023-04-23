@@ -37,4 +37,3 @@ export const UserSidebarItems: ISidebarItem[] = [
     path: "/add-post",
   },
 ];
-

@@ -12,13 +12,13 @@
   align-self: flex-end;
 
   justify-content: space-between;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     width: 300px;
   }
 
-  &:hover &__text{
+  &:hover &__text {
     display: block;
   }
 
@@ -28,7 +28,7 @@
 
   &__text {
     display: none;
-    animation: anim .3s ease-in-out;
+    animation: anim 0.3s ease-in-out;
     text-decoration: none;
     color: colorFromRgb(secondary-main);
     font-size: 18px;
@@ -61,20 +61,20 @@
   }
 }
 
-.sidebarOpen{
+.sidebarOpen {
   width: 300px;
 
-  &__text{
+  &__text {
     display: block;
   }
 }
 @keyframes anim {
-  0%{
+  0% {
     opacity: 0;
     visibility: hidden;
   }
 
-  100%{
+  100% {
     opacity: 0;
     visibility: visible;
   }

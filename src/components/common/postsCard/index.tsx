@@ -5,14 +5,7 @@ import classes from "./styles.module.scss";
 import { Image, Shimmer } from "react-shimmer";
 import { Link } from "react-router-dom";
 
-const PostCard: React.FC<IPost> = ({
-  uid,
-  id,
-  timestamp,
-  user_id,
-  title,
-  image_url,
-}) => {
+const PostCard: React.FC<IPost> = ({ id, title, image_url }) => {
   return (
     <Link to={`/post/${id}`}>
       <div className={clsx(classes.post)}>

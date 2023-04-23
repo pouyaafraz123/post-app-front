@@ -64,14 +64,13 @@
   }
 
   &__content {
-    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 60px;
+    padding: 20px 20px 60px;
   }
 
-  &__text{
+  &__text {
     display: flex;
     padding: 10px 0;
     font-size: 18px;
@@ -81,7 +80,7 @@
     font-style: italic;
   }
 
-  &__link{
+  &__link {
     font-size: 18px;
     font-weight: 700;
     color: colorFromRgb(primary-main);

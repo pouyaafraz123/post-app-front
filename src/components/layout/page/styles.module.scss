@@ -11,7 +11,7 @@
     flex-direction: column;
   }
 
-  &__title{
+  &__title {
     width: 100%;
     background-color: #17161b;
     font-size: 36px;
@@ -25,20 +25,20 @@
     justify-content: space-between;
   }
 
-  &__size{
+  &__size {
     font-size: 36px;
     color: #f6f6f7;
     font-weight: 700;
   }
 
-  &__icon{
-   svg{
-     width: 40px !important;
-     height: 40px !important;
-   }
+  &__icon {
+    svg {
+      width: 40px !important;
+      height: 40px !important;
+    }
   }
 
-  &__content{
+  &__content {
     max-height: calc(100vh - 80px);
     overflow-y: auto;
   }

@@ -16,7 +16,7 @@ const Loader: React.FC<ILoaderProps> = ({ isError, isLoading, children }) => {
           justifyContent: "center",
           alignItems: "center",
           padding: "40px",
-          width:"100%"
+          width: "100%",
         }}
       >
         <BounceLoader size={100} color={"#29A9E14D"} loading={true} />

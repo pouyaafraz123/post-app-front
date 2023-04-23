@@ -66,7 +66,7 @@ const AddUserModal = ({ open, setOpen, id }: IUpdateUserModalProps) => {
       username: data?.data?.username || "",
     });
     /* eslint-disable react-hooks/exhaustive-deps */
-  }, [data,open]);
+  }, [data, open]);
 
   return (
     <Modal

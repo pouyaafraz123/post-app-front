@@ -1,14 +1,12 @@
-.profile{
+.profile {
   padding: 20px 40px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 
-  &__top{
-	display: flex;
-	gap: 20px;
-	width: 100%;
+  &__top {
+    display: flex;
+    gap: 20px;
+    width: 100%;
   }
-
-
 }

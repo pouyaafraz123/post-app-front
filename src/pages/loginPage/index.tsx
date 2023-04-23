@@ -1,8 +1,6 @@
 import clsx from "clsx";
 import classes from "./styles.module.scss";
 import { useEffect } from "react";
-import Password from "../../components/core/password";
-import password from "../../components/core/password";
 import Button from "../../components/core/button";
 import img from "../../assets/images/login-back.jpg";
 import { useAuth } from "../../hooks/useAuth";
@@ -166,10 +164,7 @@ const LoginPage = () => {
                 />
                 <span className={clsx(classes.loginPage__text)}>
                   Back to{" "}
-                  <Link
-                    to={"/login"}
-                    className={clsx(classes.loginPage__link)}
-                  >
+                  <Link to={"/login"} className={clsx(classes.loginPage__link)}>
                     {" "}
                     Login
                   </Link>

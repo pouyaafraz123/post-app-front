@@ -46,13 +46,11 @@ function humanizedDate(
     "Saturday",
   ];
   const day = dateInstance?.getDay();
-  const humanizedDate = `${showDay ? weekday[day] : ""} ${
+  return `${showDay ? weekday[day] : ""} ${
     monthNames[dateInstance?.getMonth()]
   } ${dateInstance?.getDate()}, ${dateInstance?.getFullYear()} ${
     showTime ? time : ""
   }`;
-
-  return humanizedDate;
 }
 
 // function that convert data to readable string and return its time
@@ -159,10 +157,10 @@ function getDaysBetween(date: [Date | null, Date | null]) {
 }
 
 function isTimeOverlap(aStart: Date, aEnd: Date, bStart: Date, bEnd: Date) {
-  var e1start = aStart.getTime();
-  var e1end = aEnd.getTime();
-  var e2start = bStart.getTime();
-  var e2end = bEnd.getTime();
+  const e1start = aStart.getTime();
+  const e1end = aEnd.getTime();
+  const e2start = bStart.getTime();
+  const e2end = bEnd.getTime();
 
   return (
     (e1start > e2start && e1start < e2end) ||

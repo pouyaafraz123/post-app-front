@@ -13,7 +13,6 @@ const CommentCard: React.FC<IComment> = ({
   timestamp,
   user_id,
   text,
-  post_id,
 }) => {
   const check = useAccess();
 
