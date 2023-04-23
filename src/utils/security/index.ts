@@ -6,7 +6,6 @@ const useAccess = () => {
   return (user_id: number) => {
     if (profile?.data?.data?.type === "SUPER_ADMIN") return true;
     return profile?.data?.data?.id === user_id;
-
   };
 };
 

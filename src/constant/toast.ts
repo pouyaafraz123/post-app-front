@@ -11,4 +11,7 @@ export const TOAST_PROPS: ToastContainerProps = {
   draggable: true,
   pauseOnHover: true,
   theme: "colored",
+  toastStyle:{zIndex:99999999},
+  style:{zIndex:99999999},
+  bodyStyle:{zIndex:99999999},
 };

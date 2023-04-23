@@ -37,7 +37,7 @@ function FormBaseElement({
   return (
     <div
       className={clsx([
-        // classes.formElementBaseContainer,
+        classes.formElementBaseContainer,
         noPadding && classes.no,
         className,
       ])}

@@ -1,4 +1,4 @@
-@import  "src/styles/functions";
+@import "src/styles/functions";
 
 .loginPage {
   position: relative;
@@ -8,11 +8,11 @@
   width: 100%;
   height: 100%;
 
-  &__img{
+  &__img {
     background-size: cover;
     background-position: center;
-    height: 50%;
     border-radius: 40px 40px 0 0;
+    flex-grow: 1;
   }
 
   &__particles {
@@ -26,6 +26,8 @@
   }
 
   &__section {
+    flex-direction: column;
+    display: flex;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -33,12 +35,12 @@
     height: 80vh;
     aspect-ratio: 3 /4;
 
-	border-radius: 40px;
+    border-radius: 40px;
 
     box-shadow: 0 8px 10px 20px rgba(15, 15, 15, 0.5);
   }
 
-  &__secBack{
+  &__secBack {
     backdrop-filter: blur(20px);
     position: absolute;
     left: 50%;
@@ -48,13 +50,12 @@
     aspect-ratio: 3 /4;
     background-color: rgba(44, 47, 59, 0.8);
     border-radius: 40px;
-
   }
-  
-  &__title{
+
+  &__title {
     color: colorFromRgb(light-text);
     font-size: 30px;
-    padding: 10px 0;
+    padding: 5px 0;
     font-weight: 700;
     display: flex;
     justify-content: center;
@@ -62,27 +63,41 @@
     text-align: center;
   }
 
-  &__content{
+  &__content {
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-grow: 1;
-    height: 50%;
     padding-bottom: 60px;
   }
 
-  &__inputs{
+  &__text{
+    display: flex;
+    padding: 10px 0;
+    font-size: 18px;
+    gap: 5px;
+    font-weight: 700;
+    color: #f6f6f7;
+    font-style: italic;
+  }
+
+  &__link{
+    font-size: 18px;
+    font-weight: 700;
+    color: colorFromRgb(primary-main);
+    text-decoration: none;
+    font-style: italic;
+  }
+
+  &__inputs {
     display: flex;
     flex-direction: column;
     gap: 10px;
     flex-grow: 1;
   }
 
-  &__btn{
+  &__btn {
     margin-top: 40px;
     width: 100%;
   }
-
-
 }

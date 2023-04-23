@@ -1,0 +1,287 @@
+@import "src/styles/functions.scss";
+
+.iconButton {
+  transition: time(transition-hover);
+  border-radius: space(radius);
+  padding: 7px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+
+  &[data-size="small"] {
+    max-height: space(height-small);
+    min-height: space(height-small);
+    max-width: space(height-small);
+    min-width: space(height-small);
+  }
+
+  &[data-size="normal"] {
+    max-height: space(height-normal);
+    min-height: space(height-normal);
+    max-width: space(height-normal);
+    min-width: space(height-normal);
+  }
+
+  &[data-size="big"] {
+    max-height: space(height-big);
+    min-height: space(height-big);
+    max-width: space(height-big);
+    min-width: space(height-big);
+  }
+
+  &[data-variant="transparent"] {
+    background-color: color(gray-very-light);
+    border: 1px solid transparent;
+    color: color(gray-main);
+    & > .icon[data-variant="bold"] > path {
+      fill: color(gray-main);
+      transition: time(transition-hover);
+    }
+
+    & > .icon[data-variant="linear"] > path {
+      stroke: color(gray-main);
+      transition: time(transition-hover);
+    }
+
+    &:hover {
+      border-color: color(gray-light);
+    }
+  }
+
+  &[data-variant="outlined"][data-color="primary"] {
+    background-color: rgba(color(primary-main), 0.05);
+    border: 1px solid color(primary-main);
+    color: color(primary-main);
+    & > .icon[data-variant="bold"] > path {
+      fill: color(primary-main);
+      transition: time(transition-hover);
+    }
+
+    & > .icon[data-variant="linear"] > path {
+      stroke: color(primary-main);
+      transition: time(transition-hover);
+    }
+
+    &:hover {
+      background-color: color(primary-main);
+      color: color(primary-contrast-text);
+
+      & > .icon[data-variant="bold"] > path {
+        fill: color(primary-contrast-text);
+      }
+
+      & > .icon[data-variant="linear"] > path {
+        stroke: color(primary-contrast-text);
+      }
+    }
+  }
+
+  &[data-variant="outlined"][data-color="secondary"] {
+    background-color: transparent;
+    border: 1px solid color(secondary-main);
+    color: color(secondary-main);
+
+    & > .icon[data-variant="bold"] > path {
+      fill: color(secondary-main);
+      transition: time(transition-hover);
+    }
+
+    & > .icon[data-variant="linear"] > path {
+      stroke: color(secondary-main);
+      transition: time(transition-hover);
+    }
+
+    &:hover {
+      background-color: color(secondary-main);
+      color: color(secondary-contrast-text);
+
+      & > .icon[data-variant="bold"] > path {
+        fill: color(secondary-contrast-text);
+      }
+
+      & > .icon[data-variant="linear"] > path {
+        stroke: color(secondary-contrast-text);
+      }
+    }
+  }
+
+  &[data-variant="text"] {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: color(primary-main);
+    text-decoration: underline;
+
+    & > .icon[data-variant="bold"] > path {
+      fill: color(primary-main);
+      transition: time(transition-hover);
+    }
+
+    & > .icon[data-variant="linear"] > path {
+      stroke: color(primary-main);
+      transition: time(transition-hover);
+    }
+
+    &:hover {
+      color: color(secondary-main);
+
+      & > .icon[data-variant="bold"] > path {
+        fill: color(secondary-main);
+      }
+
+      & > .icon[data-variant="linear"] > path {
+        stroke: color(secondary-main);
+      }
+    }
+  }
+
+  &[data-variant="contained"] {
+    background-color: color(primary-main);
+    border: none;
+    color: color(primary-contrast-text);
+
+    & > .icon[data-variant="bold"] > path {
+      fill: color(primary-contrast-text);
+      transition: time(transition-hover);
+    }
+
+    & > .icon[data-variant="linear"] > path {
+      stroke: color(secondary-contrast-text);
+      transition: time(transition-hover);
+    }
+
+    &:hover {
+      background-color: color(secondary-main);
+      color: color(secondary-contrast-text);
+
+      & > .icon[data-variant="bold"] > path {
+        fill: color(primary-contrast-text);
+      }
+
+      & > .icon[data-variant="linear"] > path {
+        stroke: color(secondary-contrast-text);
+      }
+    }
+  }
+
+  &[data-color="success"] {
+    background-color: color(success-main);
+    border: 1px solid color(success-main);
+    color: color(success-contrast-text);
+    & > .icon[data-variant="bold"] > path {
+      fill: color(success-contrast-text);
+      transition: time(transition-hover);
+    }
+
+    & > .icon[data-variant="linear"] > path {
+      stroke: color(success-contrast-text);
+      transition: time(transition-hover);
+    }
+
+    &:hover {
+      background-color: color(success-dark);
+      transition: time(transition-hover);
+    }
+  }
+  &[data-variant="contained"][data-color="error"] {
+    background-color: colorFromRgb(danger);
+    border: 1px solid colorFromRgb(danger);
+    color: color(success-contrast-text);
+    &:hover {
+      background-color: colorFromRgba(danger, 80);
+      transition: time(transition-hover);
+    }
+    & > .icon[data-variant="bold"] > path {
+      fill: color(success-contrast-text);
+      transition: time(transition-hover);
+    }
+
+    & > .icon[data-variant="linear"] > path {
+      stroke: color(success-contrast-text);
+      transition: time(transition-hover);
+    }
+  }
+
+  &[data-color="error"] {
+    background-color: transparent;
+    border: 1px solid color(error-main);
+    color: color(error-main);
+    & > .icon[data-variant="bold"] > path {
+      fill: color(error-main);
+      transition: time(transition-hover);
+    }
+
+    & > .icon[data-variant="linear"] > path {
+      stroke: color(error-main);
+      transition: time(transition-hover);
+    }
+
+    &:hover {
+      background-color: color(error-main);
+      transition: time(transition-hover);
+
+      & > .icon[data-variant="bold"] > path {
+        fill: color(error-contrast-text);
+        transition: time(transition-hover);
+      }
+
+      & > .icon[data-variant="linear"] > path {
+        stroke: color(error-contrast-text);
+        transition: time(transition-hover);
+      }
+    }
+  }
+
+  &[data-color="warning"] {
+    background-color: transparent;
+    border: 1px solid color(warning-main);
+    color: color(warning-main);
+    & > .icon[data-variant="bold"] > path {
+      fill: color(warning-main);
+      transition: time(transition-hover);
+    }
+
+    & > .icon[data-variant="linear"] > path {
+      stroke: color(warning-main);
+      transition: time(transition-hover);
+    }
+
+    &:hover {
+      background-color: color(warning-main);
+      transition: time(transition-hover);
+
+      & > .icon[data-variant="bold"] > path {
+        fill: color(warning-contrast-text);
+        transition: time(transition-hover);
+      }
+
+      & > .icon[data-variant="linear"] > path {
+        stroke: color(warning-contrast-text);
+        transition: time(transition-hover);
+      }
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    transition: time(transition-hover);
+
+    .icon {
+      transition: time(transition-hover);
+    }
+  }
+
+  span,
+  div,
+  p {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .icon {
+    transition: time(transition-hover);
+  }
+}

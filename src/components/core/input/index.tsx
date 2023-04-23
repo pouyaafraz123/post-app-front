@@ -13,7 +13,7 @@ export interface IInputDefaultProps {
   size?: "small" | "normal" | "big";
   disabled?: boolean;
   htmlProps?: HTMLProps<HTMLInputElement>;
-  type?: "text" | "number" ;
+  type?: "text" | "number";
   validation?: "error" | "success" | "warning" | "none";
 }
 
@@ -39,7 +39,7 @@ const Input = React.forwardRef<HTMLInputElement, IInputDefaultProps>(
     return (
       <div
         className={clsx([classes.inputContainer, className])}
-        data-variant={ "textnumber"}
+        data-variant={"textnumber"}
         data-validation={"validation" in props ? props.validation : "none"}
         data-size={size}
         data-disabled={disabled}

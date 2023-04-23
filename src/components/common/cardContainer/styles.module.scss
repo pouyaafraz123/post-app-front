@@ -1,0 +1,123 @@
+@import "src/styles/functions.scss";
+
+.card {
+  background-color: #14121b;
+
+  border-radius: 5px;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  width: 100%;
+}
+
+.colored {
+  border: 1px solid transparent;
+}
+
+.success {
+  background-color: colorFromRgba(success, 20);
+  border-color: colorFromRgb(success);
+  svg {
+    &[data-variant="bold"] > path {
+      fill: colorFromRgb(success);
+    }
+
+    &[data-variant="linear"] > path {
+      stroke: colorFromRgb(success);
+    }
+  }
+}
+
+.warning {
+  background-color: colorFromRgba(warning, 20);
+  border-color: colorFromRgb(warning);
+  svg {
+    &[data-variant="bold"] > path {
+      fill: colorFromRgb(warning);
+    }
+
+    &[data-variant="linear"] > path {
+      stroke: colorFromRgb(warning);
+    }
+  }
+}
+
+.danger {
+  background-color: colorFromRgba(danger, 20);
+  border-color: colorFromRgb(danger);
+  svg {
+    &[data-variant="bold"] > path {
+      fill: colorFromRgb(danger);
+    }
+
+    &[data-variant="linear"] > path {
+      stroke: colorFromRgb(danger);
+    }
+  }
+}
+
+.primary {
+  background-color: colorFromRgba(primary-main, 20);
+  border-color: colorFromRgb(primary-main);
+  svg {
+    &[data-variant="bold"] > path {
+      fill: colorFromRgb(primary-main);
+    }
+
+    &[data-variant="linear"] > path {
+      stroke: colorFromRgb(primary-main);
+    }
+  }
+}
+
+.secondary {
+  background-color: colorFromRgba(secondary-main, 20);
+  border-color: colorFromRgb(secondary-main);
+  svg {
+    &[data-variant="bold"] > path {
+      fill: colorFromRgb(secondary-main);
+    }
+
+    &[data-variant="linear"] > path {
+      stroke: colorFromRgb(secondary-main);
+    }
+  }
+}
+
+.bCard {
+  border-left-width: 10px;
+  border-left-style: solid;
+  background-color: colorFromRgb(secondary-background);
+}
+
+.basic {
+  color: colorFromRgb(secondary-main);
+  background-color: #14121b;
+  svg {
+    &[data-variant="bold"] > path {
+      fill: colorFromRgb(primary-main);
+    }
+
+    &[data-variant="linear"] > path {
+      stroke: colorFromRgb(primary-main);
+    }
+  }
+}
+.pNone {
+  padding: 0;
+}
+.psx {
+  padding: 5px;
+}
+.ps {
+  padding: 10px;
+}
+
+.pn {
+  padding: 20px;
+}
+
+.pl {
+  padding: 30px;
+}

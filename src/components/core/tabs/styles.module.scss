@@ -1,0 +1,84 @@
+@import "src/styles/functions.scss";
+
+.tabsRoot {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  gap: space(mg-between);
+  & > * {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+  }
+}
+
+.tab {
+  box-sizing: border-box;
+  padding: 10px 40px;
+  border-radius: space(radius);
+  border: 1px solid transparent;
+  transition: all .7s ease-in-out;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  white-space: nowrap;
+
+  &[data-is-selected="false"] {
+    background-color: colorFromRgb(secondary-background);
+    color: colorFromRgb(secondary-main);
+    transition: all .7s ease-in-out;
+
+    .icon[data-variant="bold"] > path {
+      fill: colorFromRgb(gray-light);
+      transition: time(transition-hover);
+    }
+
+    .icon[data-variant="linear"] > path {
+      stroke: colorFromRgb(gray-light);
+      transition: time(transition-hover);
+    }
+
+    &:hover {
+      color: colorFromRgb(tab-hover);
+      transition: time(transition-hover);
+      border: 1px solid colorFromRgb(tab-hover);
+      cursor: pointer;
+
+      .icon[data-variant="bold"] > path {
+        fill: colorFromRgb(gray-main);
+        transition: time(transition-hover);
+      }
+
+      .icon[data-variant="linear"] > path {
+        stroke: colorFromRgb(gray-main);
+        transition: time(transition-hover);
+      }
+    }
+  }
+
+  &[data-is-selected="true"] {
+    flex-grow: 1;
+
+    background-color: colorFromRgb(primary-tab);
+    color: rgb(color(white));
+    cursor: default;
+    transition: all .7s ease-in-out;
+    font-weight: 600;
+  }
+
+  &[data-disabled="true"] {
+    background-color: rgba(color(gray-text), 0.2);
+    color: rgba(color(gray-text), 0.6);
+    cursor: default !important;
+    transition: time(default);
+  }
+
+  .icon {
+    margin-right: space(mg-between);
+  }
+}

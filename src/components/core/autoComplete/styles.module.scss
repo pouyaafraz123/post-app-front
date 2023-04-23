@@ -1,0 +1,160 @@
+@import "src/styles/functions.scss";
+@import "src/styles/mixins.scss";
+
+.inputContainer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+.inputTailIcon {
+  margin-left: space(mg-between);
+  transition: time(default);
+  width: 25px;
+  &[data-variant="bold"] > path {
+    fill: colorFromRgb(secondary-main);
+  }
+
+  &[data-variant="linear"] > path {
+    stroke: colorFromRgb(secondary-main);
+  }
+}
+.rotate {
+  transform: rotate(180deg);
+}
+.inputBox {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: space(radius);
+  padding: space(pd-y) space(pd-x);
+  transition: time(default);
+  background-color: colorFromRgb(secondary-background);
+  @include sizes;
+  border: 2px solid #f6f6f7;
+  &[data-validation="none"]:focus-within {
+    border-color: rgba(color(primary-main), 0.8);
+  }
+
+  &[data-disabled="true"] {
+    background-color: rgba(color(gray-text), 0.2);
+    .inputTailIcon {
+      &[data-variant="bold"] > path {
+        fill: colorFromRgb(gray-text);
+      }
+
+      &[data-variant="linear"] > path {
+        stroke: colorFromRgb(gray-text);
+      }
+    }
+  }
+}
+
+.input {
+  min-width: 0;
+  $me: &;
+
+  border: none;
+  flex-grow: 1;
+  color: colorFromRgb(gray-text);
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: rgba(color(gray-text), 0.6);
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &[mask-type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  background-color: transparent;
+}
+
+.inputHeadIcon {
+  margin-right: space(mg-between);
+
+  &[data-variant="bold"] > path {
+    fill: rgba(color(gray-text), 0.6);
+  }
+
+  &[data-variant="linear"] > path {
+    stroke: rgba(color(gray-text), 0.6);
+  }
+}
+
+.menuContainer {
+  top: 3em;
+  background-color: colorFromRgb(secondary-background);
+  border-radius: space(radius);
+  max-height: 13em;
+  overflow-y: auto;
+  padding: space(pd-y) space(pd-x);
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  transition: time(default);
+  visibility: hidden;
+  width: 100%;
+  &[data-open="true"] {
+    position: absolute;
+    opacity: 1;
+    transition: time(default);
+    z-index: space(z-index);
+    visibility: visible;
+  }
+  color: colorFromRgb(secondary-main);
+  box-shadow: 0 0 6px rgba(color(gray-text), 0.1);
+}
+
+.menuItem {
+  border-radius: space(radius);
+  cursor: pointer;
+  &[data-selected="true"] {
+    background-color: rgba(color(primary-main), 0.15);
+    transition: time(default);
+  }
+  &:hover {
+    background-color: rgba(color(gray-text), 0.2) !important;
+    transition: time(default) !important;
+  }
+  font-size: 13px;
+}
+
+.simpleButton {
+  @include simple-button;
+  .clearIcon {
+    width: 11px;
+    position: absolute;
+    top: space(pd-x);
+    right: space(pd-x);
+    cursor: pointer;
+    &[data-variant="bold"] > path {
+      fill: colorFromRgb(secondary-main);
+    }
+
+    &[data-variant="linear"] > path {
+      stroke: colorFromRgb(secondary-main);
+    }
+    &:hover {
+      &[data-disabled="false"] {
+        &[data-variant="bold"] > path {
+          fill: colorFromRgb(danger);
+        }
+
+        &[data-variant="linear"] > path {
+          stroke: colorFromRgb(danger);
+        }
+      }
+    }
+  }
+}

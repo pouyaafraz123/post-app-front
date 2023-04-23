@@ -39,3 +39,34 @@ export function useUsers() {
     }
   );
 }
+
+export interface ICreateUserParams {
+  username: string;
+  email: string;
+  password: string;
+  type: TUserType;
+}
+
+export function createUser(data: ICreateUserParams): Promise<IResponse<any>> {
+  return apiCaller.post("/user", data);
+}
+
+export function deleteUser(id: number): Promise<IResponse<any>> {
+  return apiCaller.delete(`user/${id}`);
+}
+
+export interface IUpdateUserParams {
+  username: string;
+  email: string;
+}
+
+export function updateUser(
+  id: number,
+  data: IUpdateUserParams
+): Promise<IResponse<any>> {
+  return apiCaller.put(`/user/${id}`, data);
+}
+
+export function promoteUser(id: number): Promise<IResponse<any>> {
+  return apiCaller.put(`/user/promote/${id}`);
+}

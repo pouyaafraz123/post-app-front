@@ -1,0 +1,49 @@
+@import "src/styles/functions.scss";
+
+.fileRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--color-gray-very-light);
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+
+  &__image {
+    max-width: 55px;
+    max-height: 55px;
+    width: 55px;
+    height: 55px;
+    border: 1px solid var(--color-gray-light);
+    border-radius: 50%;
+  }
+  &__excel {
+    max-width: 53px;
+    max-height: 53px;
+    width: 53px;
+    height: 53px;
+  }
+  &__info {
+    margin-left: 1.25rem;
+    font-size: 1rem;
+    color: colorFromRgb(secondary-main);
+    margin-right: 1rem;
+  }
+  &__trash {
+    margin-left: auto;
+    margin-right: 1rem;
+    cursor: pointer;
+    z-index: 4;
+    &:hover {
+      * {
+        stroke: var(--color-error-light) !important;
+      }
+    }
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 2.75rem 0 0 0;
+}

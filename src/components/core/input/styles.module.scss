@@ -6,8 +6,20 @@
   align-items: center;
   justify-content: center;
   border-radius: space(radius);
-  border: 2px solid transparent;
+  border: 2px solid #f6f6f7;
   padding: space(pd-y) space(pd-x);
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    caret-color: rgba(color(gray-text), 1);
+    -webkit-box-shadow: 0 0 0 30px colorFromRgb(secondary-background) inset !important;
+  }
+
+  input:-webkit-autofill {
+    -webkit-text-fill-color: rgba(color(gray-text), 1) !important;
+  }
 
   &[data-size="small"] {
     max-height: space(height-small);

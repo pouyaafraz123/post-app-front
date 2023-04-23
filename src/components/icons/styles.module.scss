@@ -1,0 +1,27 @@
+@import "src/styles/functions.scss";
+
+.icon {
+  path[stroke="#295DE1"] {
+    stroke: #4c7efc !important;
+  }
+
+  rect[fill="#295DE1"] {
+    fill: #4c7efc !important;
+  }
+
+  path[stroke="#00171F"] {
+    stroke: colorFromRgb(secondary-main) !important;
+  }
+
+  path[fill="#00171F"] {
+    fill: colorFromRgb(primary-main) !important;
+  }
+
+  rect[fill="#00171F"] {
+    fill: colorFromRgb(secondary-main) !important;
+  }
+
+  circle[fill="#00171F"] {
+    fill: colorFromRgb(secondary-main) !important;
+  }
+}

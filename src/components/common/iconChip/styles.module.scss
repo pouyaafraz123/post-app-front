@@ -1,0 +1,58 @@
+@import "src/styles/functions.scss";
+
+.chip {
+  background-color: colorFromRgba(gray-text, 10);
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 5px;
+  overflow: hidden;
+  color: colorFromRgb(secondar-main);
+
+  &__iconPlace {
+    background-color: colorFromRgb(primary-main);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    overflow: hidden;
+    flex: 0 0 auto;
+
+    svg {
+      width: 24px;
+      height: 24px;
+
+      &[data-variant="bold"] > path {
+        fill: colorFromRgb(white);
+      }
+
+      &[data-variant="linear"] > path {
+        stroke: colorFromRgb(white);
+      }
+    }
+  }
+
+  &__textPlace {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 14px;
+    padding: 0 15px;
+    display: flex;
+    color: colorFromRgb(gray-text);
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.dark {
+  background-color: colorFromRgba(gray-text, 20);
+}

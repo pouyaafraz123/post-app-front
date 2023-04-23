@@ -11,10 +11,12 @@ const Loader: React.FC<ILoaderProps> = ({ isError, isLoading, children }) => {
     return (
       <div
         style={{
-         /* height: "100vh",*/
+          /* height: "100vh",*/
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          padding: "40px",
+          width:"100%"
         }}
       >
         <BounceLoader size={100} color={"#29A9E14D"} loading={true} />

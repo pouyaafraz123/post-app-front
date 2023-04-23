@@ -34,43 +34,49 @@ export type TButtonProps = IButtonDefaultProps &
   (IButtonColorProps | IButtonVariantProps);
 
 // base button component
-function Button({
-  onClick,
-  children,
-  variant,
-  icon: Icon,
-  color,
-  className,
-  type,
-  size,
-  disabled,
-  rootAttributes,
-  isLoading,
-}: TButtonProps) {
-  // render component
-  return (
-    <button
-      data-testid="test-button"
-      className={clsx([classes.button, className])}
-      onClick={onClick}
-      type={type}
-      data-variant={variant}
-      data-color={color}
-      data-size={size}
-      disabled={disabled || isLoading}
-      {...rootAttributes}
-    >
-      {/* TODO: Create wrapper components for every icon and handle fill and stroke inside them */}
-      {isLoading && (
-        <div className="d-flex mt-2">
-          <BeatLoader color="#fff" size={10} margin={2} />
-        </div>
-      )}
-      {Icon && <Icon data-testid="test-button-icon" className={classes.icon} />}
-      {!isLoading && children}
-    </button>
-  );
-}
+const Button = React.forwardRef<HTMLButtonElement, IButtonDefaultProps>(
+  (outProps, ref) => {
+    const {
+      onClick,
+      children,
+      variant,
+      icon: Icon,
+      color,
+      className,
+      type,
+      size,
+      disabled,
+      rootAttributes,
+      isLoading,
+    } = outProps;
+    // render component
+    return (
+      <button
+        data-testid="test-button"
+        className={clsx([classes.button, className])}
+        onClick={onClick}
+        type={type}
+        data-variant={variant}
+        data-color={color}
+        data-size={size}
+        disabled={disabled || isLoading}
+        ref={ref}
+        {...rootAttributes}
+      >
+        {/* TODO: Create wrapper components for every icon and handle fill and stroke inside them */}
+        {isLoading && (
+          <div className="d-flex mt-2">
+            <BeatLoader color="#fff" size={10} margin={2} />
+          </div>
+        )}
+        {Icon && (
+          <Icon data-testid="test-button-icon" className={classes.icon} />
+        )}
+        {!isLoading && children}
+      </button>
+    );
+  }
+);
 
 Button.defaultProps = {
   variant: "contained",

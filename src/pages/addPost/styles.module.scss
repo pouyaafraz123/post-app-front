@@ -1,0 +1,13 @@
+.addPost{
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 20px;
+
+  &__btn{
+	margin-top: 40px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+  }
+}

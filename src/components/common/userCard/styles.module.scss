@@ -1,0 +1,46 @@
+@import "src/styles/functions.scss";
+
+.wrapper{
+  padding: 5px;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  transition: all .3s ease-in-out;
+  flex-grow: 1;
+  &:hover{
+    border: 3px solid colorFromRgb(primary-main);
+    cursor: pointer;
+  }
+}
+
+.wrapperHover{
+  padding: 0;
+  &:hover{
+    border: 3px solid transparent;
+    cursor: default;
+  }
+}
+
+.userCard {
+  &__icons {
+    path {
+      fill: #fff !important;
+    }
+  }
+  &__titles {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 500;
+    color: colorFromRgba(gray-text, 80);
+  }
+
+  &__primary {
+    font-size: 14px;
+    font-weight: 800;
+    color: colorFromRgba(primary-main, 100);
+  }
+}

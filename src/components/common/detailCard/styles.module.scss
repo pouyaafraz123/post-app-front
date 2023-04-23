@@ -1,0 +1,87 @@
+@import "src/styles/functions.scss";
+
+.row{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.detailCardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  color: colorFromRgb(secondary-main);
+  width: 100%;
+  min-width: 250px;
+
+  &__buttons{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 200px;
+    gap: 20px;
+  }
+
+  &__bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__danger {
+    z-index: 999;
+    svg {
+      path {
+        fill: colorFromRgb(danger) !important;
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+    color: colorFromRgb(secondary-main);
+  }
+
+  &__sub {
+    font-weight: 700;
+    font-size: 16px;
+    color: colorFromRgb(gray-text);
+    display: flex;
+    gap: 5px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    color: colorFromRgb(primary-main);
+  }
+}

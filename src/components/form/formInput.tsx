@@ -1,7 +1,6 @@
 import Input, { IInputDefaultProps } from "../core/input";
 import FormBaseElement, { IBaseProps, IFormikFieldProps } from "./base";
 
-
 interface IFormInputProps {
   rootProps?: Partial<IInputDefaultProps>;
 }

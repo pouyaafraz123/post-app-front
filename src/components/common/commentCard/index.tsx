@@ -1,6 +1,6 @@
 import React from "react";
-import { IComment } from "../../../api/comments";
-import { useQuery } from "@tanstack/react-query";
+import { deleteComment, getPostComment, IComment } from "../../../api/comments";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { getUser } from "../../../api/users";
 import { TrashBold } from "../../icons";
 import clsx from "clsx";
@@ -17,6 +17,12 @@ const CommentCard: React.FC<IComment> = ({
 }) => {
   const check = useAccess();
 
+  const client = useQueryClient();
+
+  const { mutate } = useMutation(deleteComment, {
+    onSuccess: () => client.invalidateQueries([getPostComment.name]),
+  });
+
   const { data } = useQuery([getUser.name, user_id], () =>
     getUser(Number(user_id))
   );
@@ -28,7 +34,7 @@ const CommentCard: React.FC<IComment> = ({
           {data?.data?.username}
         </div>
         {check(user_id) && (
-          <div>
+          <div onClick={() => mutate(id)} style={{ cursor: "pointer" }}>
             <TrashBold />
           </div>
         )}

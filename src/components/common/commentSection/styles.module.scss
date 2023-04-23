@@ -1,5 +1,37 @@
-.comments{
+@import "src/styles/functions";
+.comments {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.btn{
+  width: 100%;
+  padding: 0 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  svg {
+    path {
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  &:hover {
+    color: colorFromRgb(primary-main);
+    svg {
+      path {
+        stroke: colorFromRgb(primary-main);
+      }
+    }
+  }
 }

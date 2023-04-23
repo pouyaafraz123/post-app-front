@@ -93,9 +93,6 @@
   --color-secondary-background: var(--color-blue-zodiac);
 }
 
-
-
-
 [data-theme="royal_blue_light"] {
   /* primary color for banners and row number etc. */
   --color-primary-main: var(--color-royal-blue);

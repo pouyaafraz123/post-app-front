@@ -45,6 +45,7 @@
 
   &__shimmer {
     opacity: 0.1 !important;
+    border-radius: 25px;
   }
 
   &__image {
@@ -90,9 +91,19 @@
     font-size: 16px;
     font-weight: 400;
     color: colorFromRgb(light-text);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
   }
 
-  &__comments{
+  &__buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__comments {
     display: flex;
     flex-direction: column;
     gap: 20px;

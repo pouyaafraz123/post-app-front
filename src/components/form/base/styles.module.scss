@@ -2,7 +2,10 @@
 @import "src/styles/mixins.scss";
 
 .formElementBaseContainer {
-  padding: 0 space(pd-x) space(pd-y) space(pd-x);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .no {
@@ -10,7 +13,6 @@
 }
 
 .formElementLabel {
-  margin-bottom: 10px;
   color: colorFromRgb(secondary-main);
   font-weight: 700;
   font-size: 16px;

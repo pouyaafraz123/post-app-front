@@ -9,7 +9,7 @@
   cursor: pointer;
   background-color: #14121b;
 
-  &__shimmer{
+  &__shimmer {
     opacity: 0.1 !important;
   }
 
@@ -45,8 +45,8 @@
     font-style: oblique;
     font-size: 20px;
     transition: all 0.3s ease-in-out;
-	opacity: 0;
-	visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
   }
 
   &:hover &__info {
@@ -56,7 +56,7 @@
     bottom: 0;
     width: 100%;
     height: 100%;
-	opacity: 1;
-	visibility: visible;
+    opacity: 1;
+    visibility: visible;
   }
 }

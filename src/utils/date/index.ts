@@ -29,12 +29,12 @@ function padWithZero(num: number, minLength: number) {
 function humanizedDate(
   date: string | Date,
   showTime?: boolean,
-  showDay?: boolean,
+  showDay?: boolean
 ): string {
   const dateInstance = typeof date === "string" ? new Date(date) : date;
   const time = `${dateInstance?.getHours()}:${padWithZero(
     dateInstance?.getMinutes(),
-    2,
+    2
   )}`;
   const weekday = [
     "Sunday",
@@ -61,11 +61,11 @@ function humanizedTime(date: any, utc?: boolean): string {
 
   const output = `${padWithZero(dateInstance?.getHours(), 2)}:${padWithZero(
     dateInstance.getMinutes(),
-    2,
+    2
   )}`;
   const utcOutput = `${padWithZero(
     dateInstance?.getUTCHours(),
-    2,
+    2
   )}:${padWithZero(dateInstance?.getUTCMinutes(), 2)}`;
 
   if (utc) return utcOutput;
@@ -88,16 +88,16 @@ function convertToAPIDateFormat(date: string | Date): string {
 // convert date to string
 function convertToAPIFullDateFormat(
   date: string | Date,
-  utc?: boolean,
+  utc?: boolean
 ): string {
   if (!!date) {
     const dateInstance = new Date(date);
     const _date = convertToAPIDateFormat(date);
     const hour = convertToTwoDigits(
-      utc ? dateInstance.getUTCHours() : dateInstance.getHours(),
+      utc ? dateInstance.getUTCHours() : dateInstance.getHours()
     );
     const minute = convertToTwoDigits(
-      utc ? dateInstance.getUTCMinutes() : dateInstance.getMinutes(),
+      utc ? dateInstance.getUTCMinutes() : dateInstance.getMinutes()
     );
     // const seconds = convertToTwoDigits(
     //   utc ? dateInstance.getUTCSeconds() : dateInstance.getSeconds()
@@ -116,7 +116,7 @@ function convertToFullDateFormat(date: string | Date): string {
 
   const time = `${dateInstance.getHours()}:${padWithZero(
     dateInstance.getMinutes(),
-    2,
+    2
   )}:${padWithZero(dateInstance.getSeconds(), 2)}`;
   const dateSlash = `${month}/${day}/${year}`;
 
@@ -138,7 +138,7 @@ function convertToTime(date: string | Date): string {
 
   const time = `${dateInstance.getHours()}:${padWithZero(
     dateInstance.getMinutes(),
-    2,
+    2
   )}:${padWithZero(dateInstance.getSeconds(), 2)}`;
 
   return `${time}`;
@@ -152,7 +152,7 @@ function getDaysBetween(date: [Date | null, Date | null]) {
     const daysBetweenDates: number = Math.ceil((end - start) / MS_PER_DAY);
     return Array.from(
       new Array(daysBetweenDates),
-      (v, i) => new Date(start + i * MS_PER_DAY),
+      (v, i) => new Date(start + i * MS_PER_DAY)
     );
   }
   return [];

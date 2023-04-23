@@ -26,7 +26,7 @@ export function APIConfigurator({
       }
       return Promise.reject(error);
     }
-   /* console.log(error?.response?.data?.detail);
+    /* console.log(error?.response?.data?.detail);
     if (error?.response?.data?.detail) {
       toast.error(error?.response?.data?.detail);
       return Promise.reject(error);

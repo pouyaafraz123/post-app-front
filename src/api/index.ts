@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from "axios";
 
-const BASE_URL = "http://127.0.0.1:8000";
+export const BASE_URL = "http://127.0.0.1:8000/";
 
 const apiCaller = axios.create({
   baseURL: BASE_URL,
@@ -14,7 +14,7 @@ export interface IServerResponse<T> {
 
 export interface IResponse<T> extends AxiosResponse {
   data: T;
-  detail:string;
+  detail: string;
 }
 
 export interface IPagination {
@@ -29,9 +29,9 @@ export interface IPaginationParams {
 }
 
 export interface IPaginationTableList<T> extends IPagination {
-  total:number;
-  page:number;
-  per_page:number;
+  total: number;
+  page: number;
+  per_page: number;
   data: T[];
 }
 

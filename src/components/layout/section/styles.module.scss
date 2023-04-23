@@ -6,16 +6,32 @@
   flex-direction: column;
   gap: 20px;
 
+  &__noPadding{
+    padding: 20px 20px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+  }
+
   &__sep {
     height: 2px;
-    width: 90%;
-    background: linear-gradient(to right, #fff , rgba(255, 255, 255, 0.44) 30%, #ffffff00);
+    width: 100%;
+    background: linear-gradient(
+      to right,
+      #fff,
+      rgba(255, 255, 255, 0.44) 30%,
+      #ffffff10
+    );
   }
 
   &__title {
     font-size: 30px;
-	font-weight: 700;
-	color: colorFromRgb(secondary-main);
+    font-weight: 700;
+    color: colorFromRgb(secondary-main);
   }
 
   &__inside {

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { HomeIcon, UsersBold } from "../components/icons";
+import { AddCircleBold, HomeIcon, UsersBold } from "../components/icons";
 
 export interface ISidebarItem {
   title: string;
@@ -7,17 +7,34 @@ export interface ISidebarItem {
   path: string;
 }
 
-const SidebarItems: ISidebarItem[] = [
+export const SidebarItems: ISidebarItem[] = [
   {
     title: "Home",
     icon: <HomeIcon />,
     path: "/",
   },
   {
-    title:"Users",
-    icon:<UsersBold/>,
-    path:"/users"
-  }
+    title: "Users",
+    icon: <UsersBold />,
+    path: "/users",
+  },
+  {
+    title: "Add Post",
+    icon: <AddCircleBold />,
+    path: "/add-post",
+  },
 ];
 
-export default SidebarItems;
+export const UserSidebarItems: ISidebarItem[] = [
+  {
+    title: "Home",
+    icon: <HomeIcon />,
+    path: "/",
+  },
+  {
+    title: "Add Post",
+    icon: <AddCircleBold />,
+    path: "/add-post",
+  },
+];
+

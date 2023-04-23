@@ -20,7 +20,7 @@
   }
 
   border-radius: space(radius);
-  border: 2px solid transparent;
+  border: 2px solid #f6f6f7;
   padding: space(pd-y) space(pd-x);
 
   &[data-validation="success"] {
@@ -39,7 +39,7 @@
   }
 
   &[data-validation="none"]:focus-within {
-    border-color: rgba(color(primary-main), 0 0.8);
+    border-color: rgba(color(primary-main), 0.8);
   }
 
   &[data-disabled="true"] {

@@ -11,7 +11,7 @@ import yup from "../../utils/yupExtended";
 import FormInput from "../../components/form/formInput";
 import FormPassword from "../../components/form/password";
 import { getFormikFieldProps } from "../../utils/form";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 import { register } from "../../api/auth";
 
@@ -132,6 +132,16 @@ const LoginPage = () => {
                   }}
                   {...getFormikFieldProps("password", "Password", formik)}
                 />
+                <span className={clsx(classes.loginPage__text)}>
+                  Don't have user click{" "}
+                  <Link
+                    to={"/signup"}
+                    className={clsx(classes.loginPage__link)}
+                  >
+                    {" "}
+                    Signup
+                  </Link>
+                </span>
               </>
             )}
             {isSignup && (
@@ -154,6 +164,16 @@ const LoginPage = () => {
                   }}
                   {...getFormikFieldProps("password", "Password", formik)}
                 />
+                <span className={clsx(classes.loginPage__text)}>
+                  Back to{" "}
+                  <Link
+                    to={"/login"}
+                    className={clsx(classes.loginPage__link)}
+                  >
+                    {" "}
+                    Login
+                  </Link>
+                </span>
               </>
             )}
           </div>

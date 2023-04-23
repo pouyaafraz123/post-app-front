@@ -1,0 +1,119 @@
+@import "src/styles/functions.scss";
+
+.inputContainer {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  border-radius: space(radius);
+  border: 2px solid #f6f6f7;
+  padding: space(pd-y) space(pd-x);
+  background-color: colorFromRgb(secondary-background);
+  transition: time(default);
+  &[data-validation="success"] {
+    border-color: colorFromRgb(success);
+    transition: time(default);
+
+    .inputTailIcon {
+      &[data-variant="bold"] > path {
+        fill: colorFromRgb(success);
+      }
+
+      &[data-variant="linear"] > path {
+        stroke: colorFromRgb(success);
+      }
+      transition: time(default);
+    }
+  }
+
+  &[data-validation="error"] {
+    border-color: colorFromRgb(danger);
+    transition: time(default);
+
+    .inputTailIcon {
+      &[data-variant="bold"] > path {
+        fill: colorFromRgb(danger);
+      }
+
+      &[data-variant="linear"] > path {
+        stroke: colorFromRgb(danger);
+      }
+      transition: time(default);
+    }
+  }
+
+  &[data-validation="warning"] {
+    border-color: colorFromRgb(warning);
+    transition: time(default);
+
+    .inputTailIcon {
+      &[data-variant="bold"] > path {
+        fill: colorFromRgb(warning);
+      }
+
+      &[data-variant="linear"] > path {
+        stroke: colorFromRgb(warning);
+      }
+      transition: time(default);
+    }
+  }
+
+  &[data-validation="none"]:focus-within {
+    border-color: rgba(color(primary-main), 0.8);
+  }
+
+  &[data-disabled="true"] {
+    background-color: rgba(color(gray-text), 0.2);
+    border: 2px solid transparent;
+    color: colorFromRgb(gray-text);
+    & > .icon[data-variant="bold"] > path {
+      fill: colorFromRgb(gray-text);
+      transition: time(transition-hover);
+    }
+
+    & > .icon[data-variant="linear"] > path {
+      stroke: colorFromRgb(gray-text);
+      transition: time(transition-hover);
+    }
+  }
+}
+
+.inputHeadIcon {
+  margin-right: space(mg-between);
+  margin-top: 5px;
+
+  &[data-variant="bold"] > path {
+    fill: rgba(color(gray-text), 0.6);
+  }
+
+  &[data-variant="linear"] > path {
+    stroke: rgba(color(gray-text), 0.6);
+  }
+}
+
+.input {
+  border: none;
+  width: 100%;
+  color: colorFromRgb(gray-text);
+  background-color: transparent;
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: rgba(color(gray-text), 0.6);
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.inputTailIcon {
+  position: absolute;
+  top: space(mg-between);
+  right: space(mg-between);
+  transition: time(default);
+}
