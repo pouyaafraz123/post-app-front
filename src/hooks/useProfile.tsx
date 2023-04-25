@@ -6,5 +6,6 @@ export function useProfile(enabled = true) {
     enabled,
     keepPreviousData: true,
     staleTime: 0,
+    retry:1
   });
 }

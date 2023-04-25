@@ -86,7 +86,7 @@ const ProfilePage = () => {
             selected={selectedTab}
           />
           {selectedTab === "2" && comments.length > 0 && (
-            <div>
+            <div className={clsx(classes.animation)}>
               <Loader isLoading={isLoading} isError={isError}>
                 <CommentSection
                   noPadding
@@ -101,7 +101,7 @@ const ProfilePage = () => {
             </div>
           )}
           {selectedTab === "1" && posts.length > 0 && (
-            <div>
+            <div className={clsx(classes.animation)}>
               <Loader isLoading={isLoading} isError={isError}>
                 <Section title={"Posts"} noPadding>
                   <PostsPlace

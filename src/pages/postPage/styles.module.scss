@@ -87,6 +87,21 @@
     color: colorFromRgb(light-text);
   }
 
+  &__posted{
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: 700;
+    font-style: oblique;
+  }
+
+  &__postedUser{
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: 700;
+    font-style: oblique;
+    color: colorFromRgb(primary-main);
+  }
+
   &__id {
     font-size: 16px;
     font-weight: 400;

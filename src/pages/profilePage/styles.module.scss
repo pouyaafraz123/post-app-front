@@ -10,3 +10,17 @@
     width: 100%;
   }
 }
+
+.animation{
+  animation: anim .7s ease-in-out;
+}
+
+@keyframes anim {
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
